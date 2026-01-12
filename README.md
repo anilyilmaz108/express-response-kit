@@ -1,8 +1,8 @@
-# express-response-kit
+# express-response-builder
 
 Standardized API response helpers for Express.js.
 
-`express-response-kit` is a lightweight middleware that adds `res.success`,
+`express-response-builder` is a lightweight middleware that adds `res.success`,
 `res.fail`, and `res.failFromError` to Express, ensuring consistent and
 production-ready API responses with zero configuration.
 
@@ -22,7 +22,7 @@ production-ready API responses with zero configuration.
 ## Installation
 
 ```bash
-npm install express-response-kit
+npm install express-response-builder
 ```
 
 > [!NOTE]
@@ -32,7 +32,7 @@ npm install express-response-kit
 
 ```bash
 import express from "express";
-import { responseKit, errorHandler } from "express-response-kit";
+import { responseKit, errorHandler } from "express-response-builder";
 
 const app = express();
 
@@ -114,7 +114,7 @@ Response
 You can throw typed application errors anywhere in your code.
 
 ```bash
-import { AppError } from "express-response-kit";
+import { AppError } from "express-response-builder";
 
 throw new AppError({
   code: "NOT_FOUND",
@@ -129,7 +129,7 @@ For consistent error handling, register the provided error middleware
 after all routes.
 
 ```bash
-import { errorHandler } from "express-response-kit";
+import { errorHandler } from "express-response-builder";
 
 app.use(responseKit());
 
@@ -145,7 +145,7 @@ This ensures all thrown errors are converted into a standardized response.
 Define global mappings for your custom error codes.
 
 ```bash
-import { ErrorMap } from "express-response-kit";
+import { ErrorMap } from "express-response-builder";
 
 ErrorMap.CUSTOM_ERROR = {
   status: 422,

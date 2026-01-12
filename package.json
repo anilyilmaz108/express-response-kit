@@ -1,6 +1,6 @@
 {
-  "name": "express-response-kit",
-  "version": "1.0.0",
+  "name": "express-response-builder",
+  "version": "1.0.2",
   "description": "Standardized API response helpers for Express.js",
   "license": "ISC",
   "main": "dist/index.js",
