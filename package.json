@@ -2,21 +2,21 @@
   "name": "express-response-kit",
   "version": "1.0.0",
   "description": "Standardized API response helpers for Express.js",
-  "author": "",
   "license": "ISC",
-  "main": "dist/index.cjs",
-  "module": "dist/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
       "types": "./dist/index.d.ts"
     }
   },
   "files": [
     "dist"
   ],
+  "sideEffects": false,
   "scripts": {
     "build": "tsup",
     "test": "jest",
